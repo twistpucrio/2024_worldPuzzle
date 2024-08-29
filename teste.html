@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twist-a-Letter</title>
-    <link rel="stylesheet" href="styleBase.css">
-    <link rel="stylesheet" href="styleHome.css">
+    <link rel="stylesheet" href="teste.css">
+    <script src="teste.js"></script>
 </head>
 <body>
 
@@ -19,8 +19,16 @@
             <a href="nivel3.html">Nível 3</a>
         </nav>
         <section id="main">
-            <a href="teste.html">Teste</a>
             
+            <div class="game-container">
+                <h1>Word Guessing Game</h1>
+                <div class="board" id="board"></div>
+                <input type="text" id="guessInput" maxlength="5" placeholder="...">
+                <button type="button" id="enviaBtn">Submit</button>
+                <p id="message"></p>
+                <div class="key-chart" id="keyChart">
+                </div>
+            </div>
 
         </section>
         <footer id="footer">
