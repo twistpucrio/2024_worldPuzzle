@@ -68,6 +68,7 @@ function createKeyChart() { //já funciona
 		key.textContent = letra;
         key.setAttribute("id", `env${letra}`);
         key.setAttribute("type", "button");
+        key.setAttribute("class", "btnLetra");
 		keyChart.appendChild(key);
 	}
 }
@@ -149,9 +150,35 @@ function setMessage(message) {
 
 window.addEventListener("load", function(){
     let btnEnvia = document.querySelector("#enviaBtn");
+    let textoInput = document.querySelector("#guessInput");
+
+    textoInput.addEventListener('keypress', function(event) {
+        if (event.keyCode == 13) {
+            // let palavra = this.innerHTML;
+            // if (usedKeys[letra] == "absent"){
+            //     setMessage("Você digitou uma letra que não há na palavra!");
+            // }
+            submitGuess();
+        }
+    });
     
     createBoard();
     createKeyChart();
+
+    var allButtons = document.querySelectorAll(".btnLetra");
+
+    for (var i = 0; i < allButtons.length; i++) {
+        allButtons[i].addEventListener('click', function() {
+            let inputText = document.querySelector("#guessInput");
+            let letra = this.innerHTML;
+
+            if (inputText.value.length < 5){
+                if (usedKeys[letra] != "absent"){
+                    inputText.value += letra;
+                }
+            }
+        });
+    }
 
 	console.log(targetWord);
 	btnEnvia.addEventListener("click", submitGuess);
