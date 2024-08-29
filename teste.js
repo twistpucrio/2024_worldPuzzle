@@ -1,52 +1,50 @@
 const words = [
-	"APPLE",
-	"BERRY",
-	"CHERRY",
-	"DATES",
-	"EAGLE",
-	"FABLE",
-	"GRAPE",
-	"HEART",
-	"IMAGE",
-	"JOKER",
-	"KINGS",
-	"LEMON",
-	"MANGO",
-	"NINJA",
-	"OLIVE",
-	"PIZZA",
-	"QUICK",
-	"RIVER",
-	"STORM",
-	"TRICK",
-	"UNDER",
-	"VIVID",
-	"WORRY",
-	"XENON",
-	"YOUTH",
-	"ZEBRA",
-	"ALBUM",
-	"BRAVE",
-	"CRANE",
-	"DRIVE",
-	"ELITE",
-	"FRAME",
-	"GIANT",
-	"HOUSE",
-	"INTRO",
-	"JUMPY",
-	"KNEEL",
-	"LUNCH",
-	"MIGHT",
-	"NOBLE",
-	"OCEAN",
-	"PAINT",
-	"QUERY",
-	"ROUGE",
-	"SLEEP",
-	"TANGO",
-	"UNION",
-	"VIRAL"
+    "AMIGO",
+    "CANSA",
+    "FESTA",
+    "GRITO",
+    "HELIO",
+    "JOVEM",
+    "LENTE",
+    "MAGIA",
+    "NINHO",
+    "PODER",
+    "REINO",
+    "SOLAR",
+    "TIGRE",
+    "VENTO",
+    "BICHO",
+    "DENTES",
+    "ELITE",
+    "FAMIA",
+    "LIVRO",
+    "MUNDO",
+    "OLHAR",
+    "PAIS",
+    "QUEDA",
+    "SONHO",
+    "TERRA",
+    "ZEBRA",
+    "ALUNO",
+    "BEIRA",
+    "CAIXA",
+    "DIALOG",
+    "ENTRE",
+    "FLORE",
+    "GOLPE",
+    "JOGO",
+    "LIMPO",
+    "MOEDA",
+    "NOME",
+    "PENSA",
+    "RESTA",
+    "SABIA",
+    "TROCA",
+    "VIAJE",
+    "XAXIM",
+    "ZEBRO",
+    "FIM",
+    "PASSA"
 ];
 
 const targetWord = words[Math.floor(Math.random() * words.length)];
@@ -54,18 +52,15 @@ const maxAttempts = 6;
 let attempts = 0;
 const usedKeys = {};
 
-function createBoard() {
+function createBoard() { //já funciona
 	const board = document.querySelector("#board");
-	const header = document.querySelector("#header");
-    console.log(board);
-    console.log(header);
 	for (let i = 0; i < maxAttempts * 5; i++) {
 		const cell = document.createElement("div");
 		board.appendChild(cell);
 	}
 }
 
-function createKeyChart() {
+function createKeyChart() { //já funciona
 	const keyChart = document.getElementById("keyChart");
 	for (let i = 65; i <= 90; i++) {
 		const key = document.createElement("button");
@@ -158,5 +153,7 @@ window.addEventListener("load", function(){
     createBoard();
     createKeyChart();
 
+	console.log(targetWord);
+	btnEnvia.addEventListener("click", submitGuess);
     
 });
