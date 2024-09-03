@@ -23,7 +23,7 @@
             <div class="game-container">
                 <h1>Word Guessing Game</h1>
                 <div class="board" id="board"></div>
-                <input type="text" id="guessInput" maxlength="5" placeholder="...">
+                <input type="text" id="guessInput" maxlength="5" placeholder="..." oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                 <button type="button" id="enviaBtn">Submit</button>
                 <p id="message"></p>
                 <div class="key-chart" id="keyChart">

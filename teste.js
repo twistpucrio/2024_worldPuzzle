@@ -1,3 +1,22 @@
+// import * as fs from 'fs';
+// const fs = require('fs');
+
+// fs.readFile('palavras/5letras.txt', (err, data) => {
+//   if (err) throw err;
+
+//   console.log(data.toString());
+// });
+
+// fetch('palavras/5letras.txt')
+// .then(response => response.text())
+// .then(text => {
+//     const words = text.split("\n");
+// })
+
+// console.log(words);
+// console.log(words[10]);
+// console.log(typeof(words));
+
 const words = [
     "AMIGO",
     "CANSA",
@@ -101,12 +120,10 @@ function submitGuess() {
 	const targetCounts = {};
 	const guessCounts = {};
 
-	// Count occurrences of each letter in the target word
 	for (const letter of targetWord) {
 		targetCounts[letter] = (targetCounts[letter] || 0) + 1;
 	}
 
-	// First pass: mark correct letters
 	for (let i = 0; i < 5; i++) {
 		const cell = board.children[attempts * 5 + i];
 		const letter = guess[i];
@@ -118,19 +135,21 @@ function submitGuess() {
 		}
 	}
 
-	// Second pass: mark present letters
 	for (let i = 0; i < 5; i++) {
 		const cell = board.children[attempts * 5 + i];
 		const letter = guess[i];
 		if (!cell.classList.contains("correct")) {
 			if (targetCounts[letter]) {
 				cell.classList.add("present");
-				usedKeys[letter] =
-					usedKeys[letter] !== "correct" ? "present" : usedKeys[letter];
+                if (!usedKeys[letter]){
+                    usedKeys[letter] = "present";
+                }
 				targetCounts[letter]--;
 			} else {
 				cell.classList.add("absent");
-				usedKeys[letter] = usedKeys[letter] || "absent";
+                if (!usedKeys[letter]){
+                    usedKeys[letter] = "absent";                
+                }
 			}
 		}
 	}
@@ -148,17 +167,39 @@ function setMessage(message) {
 	document.getElementById("message").textContent = message;
 }
 
+function verificaEnvio(){
+    let textoInput = document.querySelector("#guessInput");
+    let envio = textoInput.value.toUpperCase();
+    console.log(envio);
+    let achado = false;
+
+    console.log(usedKeys);
+
+    for (let i = 0; i < envio.length; i++){
+        console.log(envio[i]);
+        console.log(usedKeys[envio[i]]);
+        if (usedKeys[envio[i]] == "absent"){
+            achado = true;
+        }
+    }
+
+    if ((achado) && (attempts != 0)){
+        setMessage("Você digitou uma letra que não há na palavra!");
+    } else{
+        setMessage("");
+        submitGuess();
+    }
+}
+
 window.addEventListener("load", function(){
     let btnEnvia = document.querySelector("#enviaBtn");
     let textoInput = document.querySelector("#guessInput");
 
+	console.log(targetWord);
+
     textoInput.addEventListener('keypress', function(event) {
         if (event.keyCode == 13) {
-            // let palavra = this.innerHTML;
-            // if (usedKeys[letra] == "absent"){
-            //     setMessage("Você digitou uma letra que não há na palavra!");
-            // }
-            submitGuess();
+            verificaEnvio();
         }
     });
     
@@ -180,7 +221,5 @@ window.addEventListener("load", function(){
         });
     }
 
-	console.log(targetWord);
-	btnEnvia.addEventListener("click", submitGuess);
-    
+	btnEnvia.addEventListener("click", verificaEnvio);
 });
