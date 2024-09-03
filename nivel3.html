@@ -3,24 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/styleJogos.css">
-    <link rel="stylesheet" href="styles/styleBase.css">
+    <title>Twist-a-Letter</title>
+    <link rel="stylesheet" href="styleBase.css">
+    <link rel="stylesheet" href="styleJogos.css">
+    <script src="scripts/jogo.js"></script>
 </head>
 <body>
+
     <div id="conteudo">
+
         <header id="header"></header>
         <nav id="nav">
-            <a href="index.html">Menu</a> |
-            <a href="nivel1.html">Nivel 1</a> |
-            <a href="nivel2.html">Nivel 2</a> |
-            <a href="nivel3.html">Nivel 3</a> 
+            <a href="index.html">Menu</a> 
         </nav>
         <section id="main">
-            <h1>Nivel 3</h1>
-
+            <div id="game-container">
+                <h1>Twist-a-Letter</h1>
+                <div id="quadro"></div>
+                <input type="text" id="caixaAdivinha" maxlength="5" placeholder="Entre com seu palpite">
+                <button type="button" id="btnEnvia">Enter</button> 
+                <p id="messagem"></p>
+                <div id="teclado"></div>
+            </div>
         </section>
-        <footer id="footer"></footer>
+        <footer id="footer">
+
+        </footer>
+
     </div>
     
 </body>
