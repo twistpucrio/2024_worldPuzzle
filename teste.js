@@ -1,26 +1,3 @@
-// import * as fs from 'fs';
-// const fs = require('fs');
-
-// fs.readFile('palavras/5letras.txt', (err, data) => {
-//   if (err) throw err;
-
-//   console.log(data.toString());
-// });
-
-// fetch('palavras/5letras.txt')
-// .then(response => response.text())
-// .then(text => {
-//     const words = text.split("\n");
-// })
-
-
-// const words = await fetch('palavras/5letras.txt')
-// .then(response => response.text().split("\n"));
-
-// console.log(words);
-// console.log(words[10]);
-// console.log(typeof(words));
-
 async function fetchData(){
     let words = await fetch('palavras/5letras.txt')
     .then(response => response.text())
@@ -34,7 +11,7 @@ const maxAttempts = 6;
 let attempts = 0;
 const usedKeys = {};
 
-function createBoard() { //já funciona
+function createBoard() { 
 	const board = document.querySelector("#board");
 	for (let i = 0; i < maxAttempts * 5; i++) {
 		const cell = document.createElement("div");
@@ -42,7 +19,7 @@ function createBoard() { //já funciona
 	}
 }
 
-function createKeyChart() { //já funciona
+function createKeyChart() { 
 	const keyChart = document.getElementById("keyChart");
 	for (let i = 65; i <= 90; i++) {
 		const key = document.createElement("button");
@@ -139,7 +116,7 @@ function verificaEnvio(targetWord, words){
 
     // console.log(usedKeys);
 
-    for (let i = 0; i < envio.length; i++){
+    for (let i = 0; i < envio.length; i++){ //REMOVER ISTO PARA OS NÍVEIS FÁCIL E MÉDIO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         // console.log(envio[i]);
         // console.log(usedKeys[envio[i]]);
         if (usedKeys[envio[i]] == "absent"){
