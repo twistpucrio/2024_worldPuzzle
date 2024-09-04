@@ -13,6 +13,10 @@
 //     const words = text.split("\n");
 // })
 
+
+// const words = await fetch('palavras/5letras.txt')
+// .then(response => response.text().split("\n"));
+
 // console.log(words);
 // console.log(words[10]);
 // console.log(typeof(words));
@@ -39,7 +43,6 @@ const words = [
     "LIVRO",
     "MUNDO",
     "OLHAR",
-    "PAIS",
     "QUEDA",
     "SONHO",
     "TERRA",
@@ -47,14 +50,11 @@ const words = [
     "ALUNO",
     "BEIRA",
     "CAIXA",
-    "DIALOG",
     "ENTRE",
     "FLORE",
     "GOLPE",
-    "JOGO",
     "LIMPO",
     "MOEDA",
-    "NOME",
     "PENSA",
     "RESTA",
     "SABIA",
@@ -62,7 +62,6 @@ const words = [
     "VIAJE",
     "XAXIM",
     "ZEBRO",
-    "FIM",
     "PASSA"
 ];
 
@@ -118,7 +117,6 @@ function submitGuess() {
 
 	const board = document.getElementById("board");
 	const targetCounts = {};
-	const guessCounts = {};
 
 	for (const letter of targetWord) {
 		targetCounts[letter] = (targetCounts[letter] || 0) + 1;
@@ -157,9 +155,11 @@ function submitGuess() {
 	attempts++;
 	updateKeyChart();
 	if (guess === targetWord) {
-		setMessage("Congratulations! You guessed the word.");
+		// setMessage("Congratulations! You guessed the word.");
+        let modal = document.getElementById("modal");
+        modal.classList.add("open");
 	} else if (attempts >= maxAttempts) {
-		setMessage(`Game Over! The word was ${targetWord}.`);
+		setMessage(`Você perdeu =C A palavra era ${targetWord}.`);
 	}
 }
 
@@ -170,14 +170,14 @@ function setMessage(message) {
 function verificaEnvio(){
     let textoInput = document.querySelector("#guessInput");
     let envio = textoInput.value.toUpperCase();
-    console.log(envio);
+    // console.log(envio);
     let achado = false;
 
-    console.log(usedKeys);
+    // console.log(usedKeys);
 
     for (let i = 0; i < envio.length; i++){
-        console.log(envio[i]);
-        console.log(usedKeys[envio[i]]);
+        // console.log(envio[i]);
+        // console.log(usedKeys[envio[i]]);
         if (usedKeys[envio[i]] == "absent"){
             achado = true;
         }
