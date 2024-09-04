@@ -8,8 +8,8 @@ body{
     background-color: #000000;
     color: white;
     box-sizing: border-box;
-    width: 125px;
-    height: 35px;
+    width: 220px;
+    height: 70px;
     border: 1px solid #FF00DD;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@ header{
     color:white;
     text-align: center;
     font-size: 70px;
-    margin-top: 5;
+    margin-top: 5%;
     text-shadow: 
     1px 1px 0 #FF00DD,
     -1px -1px 0 #FF00DD,
@@ -62,16 +62,24 @@ button{
 a{
     color:white;
     text-align: center;
-    font-size: large;
+    font-size: 30px;
     align-items: center;
     justify-content: center;
     display: flex;
     
+    
 }
 
-#botoes, #borda{
+ #borda{
     align-items: center;
     justify-content: center;
     display: flex;
+
+}
+
+#botoes{
+    margin: 0 auto;
+    width: 10%;
+    
 
 }
