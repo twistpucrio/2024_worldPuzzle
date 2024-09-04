@@ -21,51 +21,15 @@
 // console.log(words[10]);
 // console.log(typeof(words));
 
-const words = [
-    "AMIGO",
-    "CANSA",
-    "FESTA",
-    "GRITO",
-    "HELIO",
-    "JOVEM",
-    "LENTE",
-    "MAGIA",
-    "NINHO",
-    "PODER",
-    "REINO",
-    "SOLAR",
-    "TIGRE",
-    "VENTO",
-    "BICHO",
-    "DENTES",
-    "ELITE",
-    "FAMIA",
-    "LIVRO",
-    "MUNDO",
-    "OLHAR",
-    "QUEDA",
-    "SONHO",
-    "TERRA",
-    "ZEBRA",
-    "ALUNO",
-    "BEIRA",
-    "CAIXA",
-    "ENTRE",
-    "FLORE",
-    "GOLPE",
-    "LIMPO",
-    "MOEDA",
-    "PENSA",
-    "RESTA",
-    "SABIA",
-    "TROCA",
-    "VIAJE",
-    "XAXIM",
-    "ZEBRO",
-    "PASSA"
-];
+async function fetchData(){
+    let words = await fetch('palavras/5letras.txt')
+    .then(response => response.text())
+    .then(text => {
+        return text.split('\n');
+    })
+    return words;
+}
 
-const targetWord = words[Math.floor(Math.random() * words.length)];
 const maxAttempts = 6;
 let attempts = 0;
 const usedKeys = {};
@@ -100,7 +64,7 @@ function updateKeyChart() {
 	}
 }
 
-function submitGuess() {
+function submitGuess(targetWord) {
 	const input = document.getElementById("guessInput");
 	const guess = input.value.toUpperCase();
 	input.value = "";
@@ -167,7 +131,7 @@ function setMessage(message) {
 	document.getElementById("message").textContent = message;
 }
 
-function verificaEnvio(){
+function verificaEnvio(targetWord, words){
     let textoInput = document.querySelector("#guessInput");
     let envio = textoInput.value.toUpperCase();
     // console.log(envio);
@@ -182,24 +146,37 @@ function verificaEnvio(){
             achado = true;
         }
     }
+    let verifica = envio.toLowerCase() + '\r'
+    // console.log(verifica);
+    // console.log(typeof(verifica));
+    // console.log(words);
+    // console.log(words.includes("sagaz\r"));
+    // console.log(words.includes(verifica));
+    // console.log(typeof(words[1]));
 
-    if ((achado) && (attempts != 0)){
+    if ((achado) && (attempts != 0)){ //REMOVER ISTO PARA OS NÍVEIS FÁCIL E MÉDIO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         setMessage("Você digitou uma letra que não há na palavra!");
-    } else{
+    } else if (words.includes(verifica)){
         setMessage("");
-        submitGuess();
+        submitGuess(targetWord);
+    } else{
+        setMessage("Essa palavra não existe!");
     }
 }
 
-window.addEventListener("load", function(){
+window.addEventListener("load", async function(){
     let btnEnvia = document.querySelector("#enviaBtn");
     let textoInput = document.querySelector("#guessInput");
+
+    let words = await fetchData();
+    // console.log(words.length);
+    const targetWord = words[Math.floor(Math.random() * words.length)].toUpperCase();
 
 	console.log(targetWord);
 
     textoInput.addEventListener('keypress', function(event) {
         if (event.keyCode == 13) {
-            verificaEnvio();
+            verificaEnvio(targetWord, words);
         }
     });
     
@@ -214,12 +191,14 @@ window.addEventListener("load", function(){
             let letra = this.innerHTML;
 
             if (inputText.value.length < 5){
-                if (usedKeys[letra] != "absent"){
+                if (usedKeys[letra] != "absent"){ //REMOVER ISTO PARA OS NÍVEIS FÁCIL E MÉDIO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                     inputText.value += letra;
                 }
             }
         });
     }
 
-	btnEnvia.addEventListener("click", verificaEnvio);
+	btnEnvia.addEventListener("click", function(){
+        verificaEnvio(targetWord, words);
+    });
 });
