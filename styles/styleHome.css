@@ -82,7 +82,10 @@ a{
 
 #botoes{
     margin: 0 auto;
-    width: 10%;
-    
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
 }
