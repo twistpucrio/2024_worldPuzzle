@@ -96,6 +96,9 @@ h1{
 	grid-template-columns: repeat(4, 50px);
 	grid-gap: 5px;
 	margin-bottom: 10px;
+	justify-content: center;
+	align-items: center;
+
 }
 
 .board div {
@@ -104,7 +107,6 @@ h1{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-    
 	border: 1px solid #ccc;
 	font-size: 24px;
 	font-weight: bold;
