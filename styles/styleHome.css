@@ -1,0 +1,85 @@
+
+body{
+    background: #000000; 
+}
+
+#nivel1, #nivel3, #nivel2{
+    font-family: 'jockeyOne';
+    background-color: #000000;
+    color: white;
+    box-sizing: border-box;
+    width: 220px;
+    height: 70px;
+    border: 1px solid #FF00DD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header{
+    color:white;
+    text-align: center;
+    font-size: 70px;
+    margin-top: 5%;
+    text-shadow: 
+    1px 1px 0 #FF00DD,
+    -1px -1px 0 #FF00DD,
+    1px -1px 0 #FF00DD,
+    -1px 1px 0 ;
+}
+
+#textoExplicativo{
+    align-items: center;
+    font-family: 'jockeyOne';
+    background-color: #000000;
+    color: white;
+    box-sizing: border-box;
+    margin-top: 10;
+    width: 700px;
+    height: 250px;
+    text-align: center;
+    border: 1px solid #FF00DD;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 22px;
+    padding: 20px;
+    
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+button{
+    padding: 1%;
+    color:white;
+}
+
+a{
+    color:white;
+    text-align: center;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+    
+}
+
+ #borda{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+
+#botoes{
+    margin: 0 auto;
+    width: 10%;
+    
+
+}
