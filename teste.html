@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twist-a-Letter</title>
+    <link rel="stylesheet" href="teste.css">
+    <script src="teste.js"></script>
+</head>
+<body>
+
+    <div id="conteudo">
+
+        <header id="header">Twist-a-Letter</header>
+        <nav id="nav">
+            <a href="index.html">Menu</a> | 
+            <a href="nivel1.html">Nível 1</a> |
+            <a href="nivel2.html">Nível 2</a> |
+            <a href="nivel3.html">Nível 3</a>
+        </nav>
+        <section id="main">
+
+            <div class="modal" id="modal">
+                <div class="modal-inner">
+                    <h2>Parabéns você acertou!!</h2>
+                    <a href="teste.html">Fazer de novo?</a>
+                    <a href="nivel1.html">Próximo nível</a>
+                </div>
+            </div>
+            
+            <div class="game-container">
+                <h1>Word Guessing Game</h1>
+                <div class="board" id="board"></div>
+                <input type="text" id="guessInput" maxlength="5" placeholder="..." oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
+                <button type="button" id="enviaBtn">Submit</button>
+                <p id="message"></p>
+                <div class="key-chart" id="keyChart">
+                </div>
+            </div>
+
+        </section>
+        <footer id="footer">
+
+        </footer>
+
+    </div>
+    
+</body>
+</html>
