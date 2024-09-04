@@ -6,7 +6,8 @@
     <title>Twist-a-Letter</title>
     <link rel="stylesheet" href="styles/styleBase.css">
     <link rel="stylesheet" href="styles/styleJogos.css">
-    <script src="scripts/jogo.js"></script>
+    <script src="scripts/nivel1.js"></script>
+
 </head>
 <body>
 
@@ -21,11 +22,11 @@
         <section id="main">
             <div id="game-container">
                 <h1>Twist a letter</h1>
-                <div id="quadro"></div>
+                <div class="board" id="board"></div>
                 <input type="text" id="caixaAdivinha" maxlength="5" placeholder="Entre com seu palpite">
                 <button type="button" id="btnEnvia">Enter</button> 
                 <p id="messagem"></p>
-                <div id="teclado"></div>
+                <div class="key-chart" id="keyChart"></div>
             </div>
         </section>
         <footer id="footer">
