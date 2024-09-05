@@ -1,0 +1,187 @@
+#conteudo{
+    background-color: black;
+    font-family: 'jockeyOne';
+}
+
+#nav{
+    padding:1%;
+}
+
+#nav a{
+    color:white;
+    font-size: larger;
+    padding-left: 0.5%;
+    text-decoration: none;
+}
+
+img{
+    width: 35px;
+    height: 35px;
+}
+
+#main{
+    justify-content: center; 
+    align-items: center; 
+    display: flex;
+}
+
+
+h1{
+    color: white;
+    text-align: center;
+    font-size:50px;
+    margin-top: 0;
+    text-shadow: 
+    0.7px 0.7px 0 #00D9FF, 
+    -0.7px -0.7px 0 #00D9FF, 
+    0.7px -0.7px 0 #00D9FF,
+    -0.7px 0.7px 0 #00D9FF; 
+}
+
+
+#caixaAdivinha{
+    width: 400px;
+    height: 40px;
+    font-family: 'jockeyOne';
+}
+
+#btnEnvia{
+    width: 100px;
+    height: 40px;
+    font-family: 'jockeyOne';
+    background-color: rgb(92, 89, 89);
+    border:2px solid #00D9FF;
+    color: white;
+    cursor: pointer; 
+}
+
+#footer{
+    padding:5%;
+    background-color: b;
+}
+
+
+.teclado {
+	display: grid;
+	grid-template-columns: repeat(13, 30px);
+	grid-gap: 5px;
+	margin-top: 20px;
+}
+
+.teclado div {
+	background: #f4f4f4;
+	color: #000;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 4px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.teclado .absent {
+	background-color: #787c7e;
+	color: #fff;
+}
+.teclado .correct {
+	background-color: #6aaa64;
+	color: #fff;
+}
+
+.quadro {
+	display: grid;
+	grid-template-columns: repeat(4, 50px);
+	grid-gap: 5px;
+	margin-bottom: 10px;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.quadro div {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #ccc;
+	font-size: 24px;
+	font-weight: bold;
+	color: white;
+}
+
+.correct {
+	background-color: #6aaa64;
+	color: white;
+}
+
+.present {
+	background-color: #c9b458;
+}
+
+.absent {
+	background-color: #787c7e;
+}
+
+#game-container {
+	text-align: center;
+	background:black;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* para testes */
+#messagem{
+	color: #ccc;
+}
+
+/* parte modal */
+.modal_vit{
+	background-color: rgba(255, 255, 255, 0.219) ;
+	color: #f4f4f4;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: all 0.3s ease-in-out;
+	z-index: -1;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal_vit.open{
+	opacity: 1;
+	z-index: 999;
+}
+
+.modal_vit a{
+	color: #f4f4f4;
+}
+
+.modal_per{
+	background-color: rgba(255, 255, 255, 0.219) ;
+	color: #f4f4f4;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: all 0.3s ease-in-out;
+	z-index: -1;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal_per.open{
+	opacity: 1;
+	z-index: 999;
+}

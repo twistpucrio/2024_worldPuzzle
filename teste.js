@@ -43,18 +43,8 @@ function updateKeyChart() {
 
 function submitGuess(targetWord) {
 	const input = document.getElementById("guessInput");
-	const guess = input.value.toUpperCase();
+	const guess = input.value.toUpperCase() + '\r';
 	input.value = "";
-
-	if (guess.length !== 5) {
-		setMessage("Guess must be 5 letters long.");
-		return;
-	}
-
-	if (attempts >= maxAttempts) {
-		setMessage("No more attempts left.");
-		return;
-	}
 
 	const board = document.getElementById("board");
 	const targetCounts = {};
@@ -95,9 +85,15 @@ function submitGuess(targetWord) {
 
 	attempts++;
 	updateKeyChart();
-	if (guess === targetWord) {
+    // console.log("oieeeee");
+    // console.log(targetWord);
+    // console.log(guess);
+    // console.log(guess == targetWord);
+	if (guess == targetWord) {
 		// setMessage("Congratulations! You guessed the word.");
         let modal = document.getElementById("modal");
+        console.log(modal);
+        console.log("tudo bemm");
         modal.classList.add("open");
 	} else if (attempts >= maxAttempts) {
 		setMessage(`Você perdeu =C A palavra era ${targetWord}.`);
