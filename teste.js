@@ -96,11 +96,14 @@ function submitGuess(targetWord) {
         let modal = document.getElementById("modal");
         modal.classList.add("open");
 
-		let myAudio = document.querySelector('#audio');
-		myAudio.play();
+		//let audioParabains = document.querySelector('#parabains');
+		//audioParabains.play();
 
 	} else if (attempts >= maxAttempts) {
 		setMessage(`Você perdeu =C A palavra era ${targetWord}.`);
+        //audio triste de perdeu
+        let audioTriste = document.querySelector('#triste');
+		audioTriste.play();
 	}
 }
 
@@ -144,6 +147,9 @@ function verificaEnvio(targetWord, words){
 window.addEventListener("load", async function(){
     let btnEnvia = document.querySelector("#enviaBtn");
     let textoInput = document.querySelector("#guessInput");
+    //adiciona audio de sparkle quando carregar:
+    //let audioSparkle = document.querySelector('#sparkle');
+	//audioSparkle.play();
 
     let words = await fetchData();
     // console.log(words.length);
