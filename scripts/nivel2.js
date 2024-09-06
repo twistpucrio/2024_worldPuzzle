@@ -1,5 +1,5 @@
 async function fetchData(){
-    let words = await fetch('palavras/4letras.txt')
+    let words = await fetch('palavras/5letras.txt')
     .then(response => response.text())
     .then(text => {
         return text.split('\n');
@@ -7,13 +7,13 @@ async function fetchData(){
     return words;
 }
 
-const maxAttempts = 4;
+const maxAttempts = 5;
 let attempts = 0;
 const usedKeys = {};
 
 function createBoard() { 
 	const board = document.querySelector("#quadro");
-	for (let i = 0; i < maxAttempts * 4; i++) {
+	for (let i = 0; i < maxAttempts * 5; i++) {
 		const cell = document.createElement("div");
 		board.appendChild(cell);
 	}
@@ -53,8 +53,8 @@ function submitGuess(targetWord) {
 		targetCounts[letter] = (targetCounts[letter] || 0) + 1;
 	}
 
-	for (let i = 0; i < 4; i++) {
-		const cell = board.children[attempts * 4 + i];
+	for (let i = 0; i < 5; i++) {
+		const cell = board.children[attempts * 5 + i];
 		const letter = guess[i];
 		cell.textContent = letter;
 		if (letter === targetWord[i]) {
@@ -64,8 +64,8 @@ function submitGuess(targetWord) {
 		}
 	}
 
-	for (let i = 0; i < 4; i++) {
-		const cell = board.children[attempts * 4 + i];
+	for (let i = 0; i < 5; i++) {
+		const cell = board.children[attempts * 5 + i];
 		const letter = guess[i];
 		if (!cell.classList.contains("correct")) {
 			if (targetCounts[letter]) {
@@ -113,7 +113,9 @@ function verificaEnvio(targetWord, words){
     }
     let verifica = envio.toLowerCase() + '\r';
 
-    if (words.includes(verifica)){
+    if ((achado) && (attempts != 0)){ 
+        setMessage("Você digitou uma letra que não há na palavra!");
+    } else if (words.includes(verifica)){
         setMessage("");
         submitGuess(targetWord);
     } else{
@@ -146,8 +148,10 @@ window.addEventListener("load", async function(){
             let inputText = document.querySelector("#caixaAdivinha");
             let letra = this.innerHTML;
 
-            if (inputText.value.length < 4){
-				inputText.value += letra;
+            if (inputText.value.length < 5){
+                if (usedKeys[letra] != "absent"){ 
+                    inputText.value += letra;
+                }
             }
         });
     }

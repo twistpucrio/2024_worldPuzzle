@@ -6,12 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twist-a-Letter</title>
     <link rel="stylesheet" href="styles/styleBase.css">
-    <link rel="stylesheet" href="styles/styleJogos.css">
-    <script src="scripts/jogo.js"></script>
+    <link rel="stylesheet" href="styles/styleNivel2.css">
+    <script src="scripts/nivel2.js"></script>
 </head>
 <body>
 
     <div id="conteudo">
+
+        <div class="modal_vit" id="modal_vit">
+            <div class="modal-inner">
+                <h2>Parabéns você acertou!!</h2>
+                <a href="nivel2.html">Fazer de novo?</a>
+                <a href="nivel3.html">Próximo nível</a>
+            </div>
+        </div>
+
+        <div class="modal_per" id="modal_per">
+            <div class="modal-inner">
+                <h2>Você perdeu =c</h2>
+                <p>A palavra era:</p>
+                <p id="palavra_certa"></p>
+                <a href="nivel2.html">Tentar de novo?</a>
+                <a href="index.html">Menu</a>
+            </div>
+        </div>
 
         <header id="header"></header>
         <nav id="nav">
@@ -21,12 +39,12 @@
         </nav>
         <section id="main">
             <div id="game-container">
-                <h1>Twist a letter</h1>
-                <div id="quadro"></div>
-                <input type="text" id="caixaAdivinha" maxlength="5" placeholder="Entre com seu palpite">
-                <button type="button" id="btnEnvia">Enter</button> 
+                <h1>Twist-a-Letter</h1>
+                <div class="quadro" id="quadro"></div>
+                <input type="text" id="caixaAdivinha" maxlength="5" placeholder="Entre com seu palpite" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
+                <button type="button" id="btnEnvia">Enter</button>
                 <p id="messagem"></p>
-                <div id="teclado"></div>
+                <div class="teclado" id="teclado"></div>
             </div>
         </section>
         <footer id="footer">
