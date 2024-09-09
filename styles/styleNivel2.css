@@ -29,43 +29,51 @@ img{
 h1{
     color: white;
     text-align: center;
-    font-size:50px;
+    font-size:60px;
     margin-top: 0;
     text-shadow: 
-    0.7px 0.7px 0 #00D9FF, 
-    -0.7px -0.7px 0 #00D9FF, 
-    0.7px -0.7px 0 #00D9FF,
-    -0.7px 0.7px 0 #00D9FF; 
+    2px 2px 0 #00D9FF, 
+    -2px -2px 0 #00D9FF, 
+    2px -2px 0 #00D9FF,
+    -2px 2px 0 #00D9FF; 
 }
+
 
 
 #caixaAdivinha{
-    width: 400px;
-    height: 40px;
+    width: 600px;
+    height: 60px;
     font-family: 'jockeyOne';
+	margin-top: 5%;
+}
+
+::placeholder{
+	font-size: x-large;
 }
 
 #btnEnvia{
-    width: 100px;
-    height: 40px;
+    width: 200px;
+    height: 58px;
     font-family: 'jockeyOne';
     background-color: rgb(92, 89, 89);
     border:2px solid #00D9FF;
     color: white;
     cursor: pointer; 
+	font-size: x-large;
 }
 
+
 #footer{
-    padding:5%;
-    background-color: b;
+    padding:2%;
+    background-color: black;
 }
 
 
 .teclado {
 	display: grid;
-	grid-template-columns: repeat(13, 30px);
-	grid-gap: 5px;
-	margin-top: 20px;
+	grid-template-columns: repeat(13, 70px);
+	grid-template-rows: repeat(2, 70px);
+	grid-gap: 7px;
 }
 
 .teclado div {
@@ -91,8 +99,8 @@ h1{
 
 .quadro {
 	display: grid;
-	grid-template-columns: repeat(5, 50px);
-	grid-gap: 5px;
+	grid-template-columns: repeat(5, 60px);
+	grid-gap: 25px;
 	margin-bottom: 10px;
 	justify-content: center;
 	align-items: center;
@@ -100,8 +108,8 @@ h1{
 }
 
 .quadro div {
-	width: 50px;
-	height: 50px;
+	width: 75px;
+	height: 75px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -123,7 +131,6 @@ h1{
 .absent {
 	background-color: #787c7e;
 }
-
 #game-container {
 	text-align: center;
 	background:black;
