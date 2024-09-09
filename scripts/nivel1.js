@@ -7,7 +7,7 @@ async function fetchData(){
     return words;
 }
 
-const maxAttempts = 4;
+const maxAttempts = 6;
 let attempts = 0;
 const usedKeys = {};
 
