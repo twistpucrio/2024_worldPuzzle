@@ -96,17 +96,6 @@ a {
     z-index: 1;
 }
 
-.card-outer-button {
-    padding: 10px;
-    overflow: hidden;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
-    /* background: rgb(255, 255, 255); */
-
-    position: relative;
-    z-index: 1;
-}
-
-
 .card-inner {
     width: 500px;
     height: 250px;
@@ -127,6 +116,21 @@ a {
     text-align: center;
     font-size: 22px;
     padding: 20px;
+}
+
+.spinning-border {
+    background: conic-gradient(
+      rgba(255, 255, 255, 0) 0%,
+      #FF00DD 30%,
+      rgba(255, 255, 255, 0) 40%
+    );
+
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    scale: 2;
+
+    animation: spin 2.2s linear infinite;
 }
 
 .card-inner-button {
@@ -151,6 +155,17 @@ a {
     padding: 20px;
 }
 
+.card-outer-button {
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+    /* background: rgb(255, 255, 255); */
+
+    position: relative;
+    z-index: 1;
+}
+
+
 .spinning-border-button {
     background: conic-gradient(
       rgba(255, 255, 255, 0) 0%,
@@ -166,17 +181,3 @@ a {
     animation: spin 2s linear infinite;
 }
 
-.spinning-border {
-    background: conic-gradient(
-      rgba(255, 255, 255, 0) 0%,
-      #FF00DD 30%,
-      rgba(255, 255, 255, 0) 40%
-    );
-
-    position: absolute;
-    z-index: 2;
-    inset: 0;
-    scale: 2;
-
-    animation: spin 2.2s linear infinite;
-}
