@@ -113,9 +113,7 @@ function verificaEnvio(targetWord, words){
     }
     let verifica = envio.toLowerCase() + '\r';
 
-    if ((achado) && (attempts != 0)){ 
-        setMessage("Você digitou uma letra que não há na palavra!");
-    } else if (words.includes(verifica)){
+    if (words.includes(verifica)){
         setMessage("");
         submitGuess(targetWord);
     } else{
