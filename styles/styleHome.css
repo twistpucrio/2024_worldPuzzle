@@ -23,8 +23,8 @@ header {
     color: white;
     text-align: center;
     font-size: 70px;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     text-shadow:
         2.5px 2.5px 0 #FF00DD,
         -2.5px -2.5px 0 #FF00DD,
@@ -106,7 +106,7 @@ a {
 }
 
 .card-inner {
-    width: 500px;
+    width: 650px;
     height: 250px;
     background: rgb(0, 0, 0);
 
@@ -176,7 +176,7 @@ a {
 
     position: relative;
     z-index: 1;
-    margin:2%;
+    margin:1.3%;
     background-color: #FF00DD;
 }
 
@@ -188,7 +188,7 @@ a {
 
     position: relative;
     z-index: 1;
-    margin:2%;
+    margin:1.3%;
     background-color: hsl(308, 100%, 0%);
 }
 
