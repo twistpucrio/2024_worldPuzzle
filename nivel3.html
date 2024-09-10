@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twist a Letter</title>
     <link rel="stylesheet" href="styles/styleBase.css">
     <link rel="stylesheet" href="styles/styleNivel3.css">
+    <link rel="stylesheet" href="styles/styleJogos.css">
+
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 
     <script src="scripts/nivel3.js"></script>
@@ -16,26 +17,26 @@
     <div id="conteudo">
 
         <div class="modal_vit" id="modal_vit">
-            <div class="modal-inner">
+            <div class="modal-inner_vit">
                 <h2>Parabéns você acertou!!</h2>
-                <a href="nivel3.html">Fazer de novo?</a>
+                <a href="nivel3.html">Fazer de novo?</a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="index.html">Menu</a>
             </div>
         </div>
 
         <div class="modal_per" id="modal_per">
-            <div class="modal-inner">
+            <div class="modal-inner_per">
                 <h2>Você perdeu =c</h2>
                 <p>A palavra era:</p>
                 <p id="palavra_certa"></p>
-                <a href="nivel3.html">Tentar de novo?</a>
+                <a href="nivel3.html">Tentar de novo?</a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="index.html">Menu</a>
             </div>
         </div>
 
         <header id="header"></header>
         <nav id="nav">
-            <a href = "index.html"> 
+            <a href="index.html">
                 <img src="img/home2.png" alt="HOME">
             </a>
         </nav>
@@ -43,7 +44,8 @@
             <div id="game-container">
                 <h1>Twist a Letter</h1>
                 <div class="quadro" id="quadro"></div>
-                <input type="text" id="caixaAdivinha" maxlength="6" placeholder="Entre com seu palpite" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
+                <input type="text" id="caixaAdivinha" maxlength="6" placeholder="Entre com seu palpite"
+                    oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                 <button type="button" id="btnEnvia">Enter</button>
                 <p id="messagem"></p>
                 <div class="teclado" id="teclado"></div>

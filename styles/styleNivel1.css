@@ -25,7 +25,6 @@ img{
     display: flex;
 }
 
-
 h1{
     color: white;
     text-align: center;
@@ -37,7 +36,6 @@ h1{
     2px -2px 0 #00D9FF,
     -2px 2px 0 #00D9FF; 
 }
-
 
 #caixaAdivinha{
     width: 600px;
@@ -86,48 +84,84 @@ h1{
 	font-size:larger;
 	font-weight: bold;
 }
+
 .teclado .absent {
 	background-color: #787c7e;
 	color: #fff;
+	box-shadow: none !important;
 }
+
+.teclado .present {
+	background-color: #c9b458;
+	color: #fff;
+	box-shadow: none !important;
+}
+
+.teclado .present:hover {
+	background-color: #c0aa48;
+	border: 3px #c0aa48;
+}
+
+.teclado .present:active {
+	background-color: #c9b458;
+}
+
 .teclado .correct {
 	background-color: #6aaa64;
 	color: #fff;
+	box-shadow: none !important;
+}
+
+.teclado .correct:hover {
+	background-color: #5b9c55;
+	border: 3px #5b9c55;
+}
+
+.teclado .correct:active {
+	background-color: #6aaa64;
 }
 
 .quadro {
 	display: grid;
 	grid-template-columns: repeat(4, 60px);
-	grid-gap: 25px;
+	grid-gap: 20px;
 	margin-bottom: 10px;
 	justify-content: center;
 	align-items: center;
 }
 
 .quadro div {
-	width: 75px;
-	height: 75px;
+	width: 65px;
+	height: 65px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid #ccc;
-	font-size: 24px;
+	border: 2px solid #ccc;
+	box-shadow: 0px 0px 10px #ccc;
+	font-size: 28px;
 	font-weight: bold;
 	color: white;
 }
 
 .correct {
-	background-color: #6aaa64;
+	/* background-color: #000000; */
 	color: white;
+	border: 2px solid #6aaa64 !important;
+	box-shadow: 0px 0px 20px #6aaa64 !important;
 }
 
 .present {
-	background-color: #c9b458;
+	/* background-color: #c9b458; */
+	border: 2px solid #c9b458 !important;
+	box-shadow: 0px 0px 20px #c9b458 !important;
 }
 
 .absent {
-	background-color: #787c7e;
+	/* background-color: #787c7e; */
+	border: 2px solid #5c5e5f !important;
+	box-shadow: 0px 0px 20px #5c5e5f !important;
 }
+
 #game-container {
 	text-align: center;
 	background:black;
@@ -139,53 +173,4 @@ h1{
 /* para testes */
 #messagem{
 	color: #ccc;
-}
-
-/* parte modal */
-.modal_vit{
-	background-color: rgba(255, 255, 255, 0.219) ;
-	color: #f4f4f4;
-	opacity: 0;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	transition: all 0.3s ease-in-out;
-	z-index: -1;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.modal_vit.open{
-	opacity: 1;
-	z-index: 999;
-}
-
-.modal_vit a{
-	color: #f4f4f4;
-}
-
-.modal_per{
-	background-color: rgba(255, 255, 255, 0.219) ;
-	color: #f4f4f4;
-	opacity: 0;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	transition: all 0.3s ease-in-out;
-	z-index: -1;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.modal_per.open{
-	opacity: 1;
-	z-index: 999;
 }
