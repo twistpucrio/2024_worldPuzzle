@@ -36,7 +36,12 @@ h1 {
     font-family: 'jockeyOne';
     text-align: center;
     color: white;
-    margin-top: 3%;
+    text-shadow:
+    1.5px 1.5px 0 #FF00DD,
+    -1.5px -1.5px 0 #FF00DD,
+    1.5px -1.5px 0 #FF00DD,
+    -1.5px 1.5px 0 #FF00DD;
+    font-size: 35px;
 }
 
 button {
