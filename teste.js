@@ -179,6 +179,7 @@ window.addEventListener("load", async function(){
                 }
             }
         });
+        
     }
 
 	btnEnvia.addEventListener("click", function(){
