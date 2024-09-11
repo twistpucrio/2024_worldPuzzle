@@ -104,7 +104,7 @@ function submitGuess(targetWord) {
         modal.classList.add("open");
 
 		//let audioParabains = document.querySelector('#parabains');
-		//audioParabains.play();
+		audioParabains.play();
 
 	} else if (attempts >= maxAttempts) {
 		setMessage(`Você perdeu =C A palavra era ${targetWord}.`);
