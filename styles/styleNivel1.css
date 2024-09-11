@@ -48,7 +48,9 @@ h1{
     text-align: center;
     font-size:3.75rem;
     margin-top: 2%;
+    margin-bottom: 1%;
     text-shadow: 
+
 	0.15625rem 0.15625rem 0 #00D9FF, 
 	-0.15625rem -0.15625rem 0 #00D9FF, 
 	0.15625rem -0.15625rem 0 #00D9FF,
@@ -58,8 +60,11 @@ h1{
 #caixaAdivinha{
     width: 37.5rem;  /* 600px convertido para rem */
     height: 3.75rem;
+
     font-family: 'jockeyOne';
-	margin-top: 5%;
+	font-size: x-large;
+	padding: 0.5%;
+	margin-bottom: 1%;
 }
 
 ::placeholder{
@@ -67,14 +72,30 @@ h1{
 }
 
 #btnEnvia{
+
     width: 12.5rem;
     height: 3.625rem;
     font-family: 'jockeyOne';
     background-color: rgb(92, 89, 89);
     border:0.125rem solid #00D9FF;
+
     color: white;
     cursor: pointer; 
 	font-size: x-large;
+	padding: 0.5%;
+	margin-left: 3%;
+	margin-bottom: 1%;
+	box-shadow: 0px 0px 20px #00D9FF !important;
+}
+
+#btnEnvia:hover{
+    background-color: rgb(71, 68, 68);
+	border:2px solid #08bddd;
+}
+
+#btnEnvia:active{
+    background-color: rgb(92, 89, 89);
+	border:2px solid #00D9FF;
 }
 
 #footer{
@@ -84,6 +105,7 @@ h1{
 
 
 .teclado {
+	margin-top: 2%;
 	display: grid;
 	grid-template-columns: repeat(13, 4.375rem);
 	grid-template-rows: repeat(2, 4.375rem);
@@ -95,6 +117,7 @@ h1{
 	color: #000;
 	width: 1.875rem;
 	height: 1.875rem;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -103,10 +126,34 @@ h1{
 	font-weight: bold;
 }
 
+.teclado button{
+	border-radius: 10%;
+	font-size: x-large;
+	/* font-weight: bold; */
+	font-family: 'jockeyOne';
+	background-color: #ebedee;
+}
+
+.teclado button:hover{
+	background-color: #d6d7d8;
+}
+
+.teclado button:active{
+	background-color: #ebedee;
+}
+
 .teclado .absent {
 	background-color: #787c7e;
 	color: #fff;
 	box-shadow: none !important;
+}
+
+.teclado .absent:hover {
+	background-color: #626769 !important;
+}
+
+.teclado .absent:active {
+	background-color: #787c7e !important;
 }
 
 .teclado .present {
