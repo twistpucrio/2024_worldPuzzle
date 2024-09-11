@@ -4,13 +4,26 @@
 }
 
 #nav{
-    padding:1%;
+	padding:1%;
+	margin-bottom: 0;
+	width: 50px;
+	height: 50px;
+	padding-left: 0.5%;
+	display: inline-block;
+	margin-left: 10px;
+	position: absolute;
+	top: 1%;
+	left: 1%;
+	
 }
-
+body {
+    background: #000000;
+}
 #nav a{
-    color:white;
+	color:white;
     font-size: larger;
     padding-left: 0.5%;
+	margin-bottom: 0;
     text-decoration: none;
 }
 
@@ -30,13 +43,14 @@ h1{
     color: white;
     text-align: center;
     font-size:60px;
-    margin-top: 0;
+    margin-top: 2%;
     text-shadow: 
     2px 2px 0 #00D9FF, 
     -2px -2px 0 #00D9FF, 
     2px -2px 0 #00D9FF,
     -2px 2px 0 #00D9FF; 
 }
+
 
 
 #caixaAdivinha{
@@ -170,9 +184,10 @@ h1{
 #game-container {
 	text-align: center;
 	background:black;
-	padding: 20px;
+	margin-top: 0;
 	border-radius: 8px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	display: inline-block;
 }
 
 /* para testes */
