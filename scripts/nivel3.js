@@ -1,5 +1,5 @@
 async function fetchData(){
-    let words = await fetch('palavras/5letras.txt')
+    let words = await fetch('palavras/6letras.txt')
     .then(response => response.text())
     .then(text => {
         return text.split('\n');
@@ -12,15 +12,15 @@ let attempts = 0;
 const usedKeys = {};
 
 function createBoard() { 
-	const board = document.querySelector("#board");
-	for (let i = 0; i < maxAttempts * 5; i++) {
+	const board = document.querySelector("#quadro");
+	for (let i = 0; i < maxAttempts * 6; i++) {
 		const cell = document.createElement("div");
 		board.appendChild(cell);
 	}
 }
 
 function createKeyChart() { 
-	const keyChart = document.getElementById("keyChart");
+	const keyChart = document.getElementById("teclado");
 	for (let i = 65; i <= 90; i++) {
 		const key = document.createElement("button");
         let letra = String.fromCharCode(i)
@@ -33,7 +33,7 @@ function createKeyChart() {
 }
 
 function updateKeyChart() {
-	const keyChart = document.getElementById("keyChart").children;
+	const keyChart = document.getElementById("teclado").children;
 	for (let i = 0; i < keyChart.length; i++) {
 		const key = keyChart[i];
 		const letter = key.textContent;
@@ -42,26 +42,19 @@ function updateKeyChart() {
 }
 
 function submitGuess(targetWord) {
-	const input = document.getElementById("guessInput");
-	const guess = input.value.toUpperCase()+'\r';
+	const input = document.getElementById("caixaAdivinha");
+	const guess = input.value.toUpperCase() + '\r';
 	input.value = "";
 
-
-	if (attempts >= maxAttempts) {
-		setMessage("No more attempts left.");
-		return;
-	}
-
-
-	const board = document.getElementById("board");
+	const board = document.getElementById("quadro");
 	const targetCounts = {};
 
 	for (const letter of targetWord) {
 		targetCounts[letter] = (targetCounts[letter] || 0) + 1;
 	}
 
-	for (let i = 0; i < 5; i++) {
-		const cell = board.children[attempts * 5 + i];
+	for (let i = 0; i < 6; i++) {
+		const cell = board.children[attempts * 6 + i];
 		const letter = guess[i];
 		cell.textContent = letter;
 		if (letter === targetWord[i]) {
@@ -71,8 +64,8 @@ function submitGuess(targetWord) {
 		}
 	}
 
-	for (let i = 0; i < 5; i++) {
-		const cell = board.children[attempts * 5 + i];
+	for (let i = 0; i < 6; i++) {
+		const cell = board.children[attempts * 6 + i];
 		const letter = guess[i];
 		if (!cell.classList.contains("correct")) {
 			if (targetCounts[letter]) {
@@ -92,56 +85,35 @@ function submitGuess(targetWord) {
 
 	attempts++;
 	updateKeyChart();
-    // console.log("oieeeee");
-    // console.log(targetWord);
-    // console.log(guess);
-    // console.log(guess == targetWord);
 	if (guess == targetWord) {
-		// setMessage("Congratulations! You guessed the word.");
-        let modal = document.getElementById("modal");
-        console.log(modal);
-        console.log("tudo bemm");
+        let modal = document.getElementById("modal_vit");
         modal.classList.add("open");
-
-		//let audioParabains = document.querySelector('#parabains');
-		//audioParabains.play();
-
 	} else if (attempts >= maxAttempts) {
-		setMessage(`Você perdeu =C A palavra era ${targetWord}.`);
-        //audio triste de perdeu
-        let audioTriste = document.querySelector('#triste');
-		audioTriste.play();
+        let modal = document.getElementById("modal_per");
+        modal.classList.add("open");
+        let paragrafo = document.getElementById("palavra_certa");
+        paragrafo.innerText = targetWord;
+		// setMessage(`Você perdeu =C A palavra era ${targetWord}.`);
 	}
 }
 
 function setMessage(message) {
-	document.getElementById("message").textContent = message;
+	document.getElementById("messagem").textContent = message;
 }
 
 function verificaEnvio(targetWord, words){
-    let textoInput = document.querySelector("#guessInput");
+    let textoInput = document.querySelector("#caixaAdivinha");
     let envio = textoInput.value.toUpperCase();
-    // console.log(envio);
     let achado = false;
 
-    // console.log(usedKeys);
-
-    for (let i = 0; i < envio.length; i++){ //REMOVER ISTO PARA OS NÍVEIS FÁCIL E MÉDIO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        // console.log(envio[i]);
-        // console.log(usedKeys[envio[i]]);
+    for (let i = 0; i < envio.length; i++){ 
         if (usedKeys[envio[i]] == "absent"){
             achado = true;
         }
     }
-    let verifica = envio.toLowerCase() + '\r'
-    // console.log(verifica);
-    // console.log(typeof(verifica));
-    // console.log(words);
-    // console.log(words.includes("sagaz\r"));
-    // console.log(words.includes(verifica));
-    // console.log(typeof(words[1]));
+    let verifica = envio.toLowerCase() + '\r';
 
-    if ((achado) && (attempts != 0)){ //REMOVER ISTO PARA OS NÍVEIS FÁCIL E MÉDIO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    if ((achado) && (attempts != 0)){ 
         setMessage("Você digitou uma letra que não há na palavra!");
     } else if (words.includes(verifica)){
         setMessage("");
@@ -152,14 +124,10 @@ function verificaEnvio(targetWord, words){
 }
 
 window.addEventListener("load", async function(){
-    let btnEnvia = document.querySelector("#enviaBtn");
-    let textoInput = document.querySelector("#guessInput");
-    //adiciona audio de sparkle quando carregar:
-    //let audioSparkle = document.querySelector('#sparkle');
-	//audioSparkle.play();
+    let btnEnvia = document.querySelector("#btnEnvia");
+    let textoInput = document.querySelector("#caixaAdivinha");
 
     let words = await fetchData();
-    // console.log(words.length);
     const targetWord = words[Math.floor(Math.random() * words.length)].toUpperCase();
 
 	console.log(targetWord);
@@ -177,16 +145,15 @@ window.addEventListener("load", async function(){
 
     for (var i = 0; i < allButtons.length; i++) {
         allButtons[i].addEventListener('click', function() {
-            let inputText = document.querySelector("#guessInput");
+            let inputText = document.querySelector("#caixaAdivinha");
             let letra = this.innerHTML;
 
-            if (inputText.value.length < 5){
-                if (usedKeys[letra] != "absent"){ //REMOVER ISTO PARA OS NÍVEIS FÁCIL E MÉDIO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            if (inputText.value.length < 6){
+                if (usedKeys[letra] != "absent"){ 
                     inputText.value += letra;
                 }
             }
         });
-        
     }
 
 	btnEnvia.addEventListener("click", function(){
