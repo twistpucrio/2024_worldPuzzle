@@ -203,7 +203,7 @@ h1{
 			width: 20rem;  /* 600px convertido para rem */
 			height: 2.7rem;
 			font-family: 'jockeyOne';
-			margin-top: 5%;
+			margin-top: 10%;
 	}
 	#btnEnvia{
 		width: 7rem;
@@ -214,20 +214,36 @@ h1{
 		color: white;
 		cursor: pointer; 
 		font-size: x-large;
+		margin-top: 0.5%;
 	}
 	.quadro {
-		margin-top: 0%;
 		display: grid;
-		grid-template-columns: repeat(4, 3rem);
-		grid-gap: 1rem;
+		grid-template-columns: repeat(4, 3.125rem); /* Ajustado de 3.75rem para 3.125rem */
+		grid-gap: 1.25rem; /* Mantido o mesmo */
+		margin-bottom: 0.625rem; /* Mantido o mesmo */
 		justify-content: center;
 		align-items: center;
+	}
+	
+	.quadro div {
+
+		width: 3.125rem; /* Ajustado de 4.0625rem para 3.125rem */
+		height: 3.125rem; /* Ajustado de 4.0625rem para 3.125rem */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 0.125rem solid #ccc; /* Mantido o mesmo */
+		box-shadow: 0 0 0.625rem #ccc; /* Mantido o mesmo */
+		font-size: 1.25rem; /* Ajustado de 1.75rem para 1.25rem */
+		font-weight: bold;
+		color: white;
 	}
 	h1{
 		color: white;
 		text-align: center;
 		font-size:3rem;
 		height: 3rem;
+		margin-bottom: 15%;
 		text-shadow: 
 		0.15625rem 0.15625rem 0 #00D9FF, 
 		-0.15625rem -0.15625rem 0 #00D9FF, 
