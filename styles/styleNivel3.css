@@ -120,13 +120,19 @@ h1{
 .teclado button{
 	border-radius: 10%;
 	font-size: x-large;
-	font-weight: bold;
-	font-family: 'Courier New', Courier, monospace;
+	/* font-weight: bold; */
+	font-family: 'jockeyOne';
+	background-color: #ebedee;
 }
 
 .teclado button:hover{
-	background-color: #787c7e;
+	background-color: #d6d7d8;
 }
+
+.teclado button:active{
+	background-color: #ebedee;
+}
+
 
 .teclado .absent {
 	background-color: #787c7e;
