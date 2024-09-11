@@ -147,9 +147,7 @@ window.addEventListener("load", async function(){
             let letra = this.innerHTML;
 
             if (inputText.value.length < 5){
-                if (usedKeys[letra] != "absent"){ 
-                    inputText.value += letra;
-                }
+                inputText.value += letra;
             }
         });
     }

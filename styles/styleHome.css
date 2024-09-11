@@ -111,7 +111,7 @@ a {
 }
 
 .card-inner {
-    width: 650px;
+    width: 650px; /* 90 % em responsividade */
     height: 250px;
     background: rgb(0, 0, 0);
 
