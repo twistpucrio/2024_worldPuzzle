@@ -134,12 +134,12 @@ body{
 
 @media screen and (max-width: 719px) {
 	.modal-inner_per{
-		width: 40%;
+		width: 60%;
 		height: 30%;
 	}
 
 	.modal-inner_vit{
-		width: 40%;
+		width: 60%;
 		height: 30%;
 	}
 }
