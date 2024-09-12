@@ -214,6 +214,7 @@ a {
 
 @media screen and (max-width: 719px) {
 	.card-inner {
+        overflow: hidden;
         width: 90%; /* 90 % em responsividade */
     }
 }
