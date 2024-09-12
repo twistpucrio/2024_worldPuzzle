@@ -139,17 +139,15 @@ window.addEventListener("load", async function(){
     createBoard();
     createKeyChart();
 
-    var allButtons = document.querySelectorAll(".btnLetra");
+    const allButtons = document.querySelectorAll(".btnLetra");
 
-    for (var i = 0; i < allButtons.length; i++) {
-        allButtons[i].addEventListener('click', function() {
+    for (let button of allButtons) {
+        button.addEventListener('click', function() {
             let inputText = document.querySelector("#caixaAdivinha");
             let letra = this.innerHTML;
 
             if (inputText.value.length < 5){
-                if (usedKeys[letra] != "absent"){ 
-                    inputText.value += letra;
-                }
+                inputText.value += letra;
             }
         });
     }

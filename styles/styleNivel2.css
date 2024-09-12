@@ -44,42 +44,66 @@ h1 {
     text-align: center;
     font-size: 3.75rem; /* 60px convertido para rem */
     margin-top: 1.25rem; /* 2% convertido para rem */
+    margin-bottom: 1%;
     text-shadow: 
         0.125rem 0.125rem 0 #00D9FF, 
         -0.125rem -0.125rem 0 #00D9FF, 
         0.125rem -0.125rem 0 #00D9FF,
         -0.125rem 0.125rem 0 #00D9FF; 
+    letter-spacing: 3px;
 }
 
-#caixaAdivinha {
-    width: 37.5rem; /* 600px convertido para rem */
-    height: 3.75rem; /* 60px convertido para rem */
+#caixaAdivinha{
+    width: 22.5rem;  /* 600px convertido para rem */
+    height: 3.05rem;
+
     font-family: 'jockeyOne';
-    margin-top: 3.125rem; /* 5% convertido para rem */
+	font-size: x-large;
+	padding: 0.5%;
+	margin-bottom: 1%;
+	margin-top: 1%;
 }
 
 ::placeholder {
     font-size: 1.25rem; /* 'x-large' aproximado para rem */
 }
 
-#btnEnvia {
-    width: 12.5rem; /* 200px convertido para rem */
-    height: 3.625rem; /* 58px convertido para rem */
+#btnEnvia{
+
+    width: 12.5rem;
+    height: 3.625rem;
     font-family: 'jockeyOne';
     background-color: rgb(92, 89, 89);
-    border: 0.125rem solid #00D9FF; /* 2px convertido para rem */
+    border:0.125rem solid #00D9FF;
+
     color: white;
-    cursor: pointer;
-    font-size: 1.25rem; /* 'x-large' aproximado para rem */
+    cursor: pointer; 
+	font-size: x-large;
+	padding: 0.5%;
+	margin-left: 3%;
+	margin-bottom: 1%;
+	box-shadow: 0px 0px 20px #00D9FF !important;
 }
 
-#footer {
-    padding: 0.625rem; /* 2% convertido para rem */
+#btnEnvia:hover{
+    background-color: rgb(71, 68, 68);
+	border:2px solid #08bddd;
+}
+
+#btnEnvia:active{
+    background-color: rgb(92, 89, 89);
+	border:2px solid #00D9FF;
+}
+
+#footer{
+    padding: 0.625rem;
     background-color: black;
 }
 
 .teclado {
+
     display: grid;
+    margin-top: 2%;
     grid-template-columns: repeat(13, 4.375rem); /* 70px convertido para rem */
     grid-template-rows: repeat(2, 4.375rem); /* 70px convertido para rem */
     grid-gap: 0.4375rem; /* 7px convertido para rem */
@@ -98,10 +122,34 @@ h1 {
     font-weight: bold;
 }
 
+.teclado button{
+	border-radius: 10%;
+	font-size: x-large;
+	/* font-weight: bold; */
+	font-family: 'jockeyOne';
+	background-color: #ebedee;
+}
+
+.teclado button:hover{
+	background-color: #d6d7d8;
+}
+
+.teclado button:active{
+	background-color: #ebedee;
+}
+
 .teclado .absent {
     background-color: #787c7e;
     color: #fff;
     box-shadow: none !important;
+}
+
+.teclado .absent:hover {
+	background-color: #626769 !important;
+}
+
+.teclado .absent:active {
+	background-color: #787c7e !important;
 }
 
 .teclado .present {
@@ -183,61 +231,6 @@ h1 {
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* 4px e 8px convertidos para rem */
     display: inline-block;
 }
-
-/* para testes */
-#messagem {
-    color: #ccc;
-}
-
-/* parte modal */
-.modal_vit {
-    background-color: rgba(255, 255, 255, 0.219);
-    color: #f4f4f4;
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: all 0.3s ease-in-out;
-    z-index: -1;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal_vit.open {
-    opacity: 1;
-    z-index: 999;
-}
-
-.modal_vit a {
-    color: #f4f4f4;
-}
-
-.modal_per {
-    background-color: rgba(255, 255, 255, 0.219);
-    color: #f4f4f4;
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: all 0.3s ease-in-out;
-    z-index: -1;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal_per.open {
-    opacity: 1;
-    z-index: 999;
-}
-
 @media screen and (max-width: 500px) { /* 420px convertido para rem */
     h1 {
 		color: white;

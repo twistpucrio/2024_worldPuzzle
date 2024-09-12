@@ -43,8 +43,15 @@ function updateKeyChart() {
 
 function submitGuess(targetWord) {
 	const input = document.getElementById("guessInput");
-	const guess = input.value.toUpperCase() + '\r';
+	const guess = input.value.toUpperCase()+'\r';
 	input.value = "";
+
+
+	if (attempts >= maxAttempts) {
+		setMessage("No more attempts left.");
+		return;
+	}
+
 
 	const board = document.getElementById("board");
 	const targetCounts = {};
@@ -95,8 +102,15 @@ function submitGuess(targetWord) {
         console.log(modal);
         console.log("tudo bemm");
         modal.classList.add("open");
+
+		//let audioParabains = document.querySelector('#parabains');
+		audioParabains.play();
+
 	} else if (attempts >= maxAttempts) {
 		setMessage(`Você perdeu =C A palavra era ${targetWord}.`);
+        //audio triste de perdeu
+        let audioTriste = document.querySelector('#triste');
+		audioTriste.play();
 	}
 }
 
@@ -140,6 +154,9 @@ function verificaEnvio(targetWord, words){
 window.addEventListener("load", async function(){
     let btnEnvia = document.querySelector("#enviaBtn");
     let textoInput = document.querySelector("#guessInput");
+    //adiciona audio de sparkle quando carregar:
+    //let audioSparkle = document.querySelector('#sparkle');
+	//audioSparkle.play();
 
     let words = await fetchData();
     // console.log(words.length);
@@ -169,6 +186,7 @@ window.addEventListener("load", async function(){
                 }
             }
         });
+        
     }
 
 	btnEnvia.addEventListener("click", function(){

@@ -13,6 +13,7 @@ body{
 	justify-items: center;
     display: block;
     align-content: center;
+	padding: 1%;
 }
 
 .modal_vit{
@@ -71,6 +72,7 @@ body{
 	justify-items: center;
     display: block;
     align-content: center;
+	padding: 1%;
 }
 
 .modal_per{
@@ -128,4 +130,16 @@ body{
 	font-size: larger;
 	font-weight: bolder;
 	letter-spacing: 5px;
+}
+
+@media screen and (max-width: 719px) {
+	.modal-inner_per{
+		width: 60%;
+		height: 30%;
+	}
+
+	.modal-inner_vit{
+		width: 60%;
+		height: 30%;
+	}
 }

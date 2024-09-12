@@ -111,7 +111,7 @@ a {
 }
 
 .card-inner {
-    width: 650px;
+    width: 650px; /* 90 % em responsividade */
     height: 250px;
     background: rgb(0, 0, 0);
 
@@ -210,4 +210,11 @@ a {
     scale: 3;
 
     animation: spin 1s linear infinite;
+}
+
+@media screen and (max-width: 719px) {
+	.card-inner {
+        overflow: hidden;
+        width: 90%; /* 90 % em responsividade */
+    }
 }

@@ -113,7 +113,9 @@ function verificaEnvio(targetWord, words){
     }
     let verifica = envio.toLowerCase() + '\r';
 
-    if (words.includes(verifica)){
+    if ((achado) && (attempts != 0)){ 
+        setMessage("Você digitou uma letra que não há na palavra!");
+    } else if (words.includes(verifica)){
         setMessage("");
         submitGuess(targetWord);
     } else{
@@ -139,10 +141,10 @@ window.addEventListener("load", async function(){
     createBoard();
     createKeyChart();
 
-    var allButtons = document.querySelectorAll(".btnLetra");
+    const allButtons = document.querySelectorAll(".btnLetra");
 
-    for (var i = 0; i < allButtons.length; i++) {
-        allButtons[i].addEventListener('click', function() {
+    for (let button of allButtons) {
+        button.addEventListener('click', function() {
             let inputText = document.querySelector("#caixaAdivinha");
             let letra = this.innerHTML;
 
