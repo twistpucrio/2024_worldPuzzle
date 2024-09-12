@@ -58,13 +58,14 @@ h1{
 }
 
 #caixaAdivinha{
-    width: 37.5rem;  /* 600px convertido para rem */
-    height: 3.75rem;
+    width: 22.5rem;  /* 600px convertido para rem */
+    height: 3.05rem;
 
     font-family: 'jockeyOne';
 	font-size: x-large;
 	padding: 0.5%;
 	margin-bottom: 1%;
+	margin-top: 1%;
 }
 
 ::placeholder{
