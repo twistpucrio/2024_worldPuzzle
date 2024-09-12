@@ -103,11 +103,11 @@ h1{
 }
 
 .teclado {
-
-    display: grid;
-    grid-template-columns: repeat(13, 4.375rem); /* 70px */
-    grid-template-rows: repeat(2, 4.375rem); /* 70px */
-    grid-gap: 0.4375rem; /* 7px */
+	margin-top: 2%;
+	display: grid;
+	grid-template-columns: repeat(13, 4.375rem);
+	grid-template-rows: repeat(2, 4.375rem);
+	grid-gap: 0.4375rem;
 }
 
 .teclado div {
