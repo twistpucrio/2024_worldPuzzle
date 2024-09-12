@@ -211,3 +211,9 @@ a {
 
     animation: spin 1s linear infinite;
 }
+
+@media screen and (max-width: 719px) {
+	.card-inner {
+        width: 90%; /* 90 % em responsividade */
+    }
+}
