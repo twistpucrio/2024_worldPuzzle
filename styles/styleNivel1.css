@@ -250,7 +250,7 @@ h1{
 			width: 20rem;  /* 600px convertido para rem */
 			height: 2.7rem;
 			font-family: 'jockeyOne';
-			margin-top: 10%;
+	
 	}
 	#btnEnvia{
 		width: 7rem;
@@ -267,7 +267,7 @@ h1{
 		display: grid;
 		grid-template-columns: repeat(4, 3.125rem); /* Ajustado de 3.75rem para 3.125rem */
 		grid-gap: 1.25rem; /* Mantido o mesmo */
-		margin-bottom: 0.625rem; /* Mantido o mesmo */
+
 		justify-content: center;
 		align-items: center;
 	}
@@ -296,5 +296,8 @@ h1{
 		-0.15625rem -0.15625rem 0 #00D9FF, 
 		0.15625rem -0.15625rem 0 #00D9FF,
 		-0.15625rem 0.15625rem 0 #00D9FF; 
+	}
+	#mensagem{
+		display: none;
 	}
 	}
