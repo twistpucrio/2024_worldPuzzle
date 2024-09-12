@@ -131,3 +131,15 @@ body{
 	font-weight: bolder;
 	letter-spacing: 5px;
 }
+
+@media screen and (max-width: 719px) {
+	.modal-inner_per{
+		width: 40%;
+		height: 30%;
+	}
+
+	.modal-inner_vit{
+		width: 40%;
+		height: 30%;
+	}
+}

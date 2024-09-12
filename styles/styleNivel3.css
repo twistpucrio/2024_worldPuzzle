@@ -53,30 +53,49 @@ h1{
     -0.15625rem 0.15625rem 0 #003CFF;
 }
 
-#caixaAdivinha{
-    width: 37.5rem; /* 600px */
-    height: 3.75rem; /* 60px */
-    font-family: 'jockeyOne';
-    margin-top: 5%;
 
+
+#caixaAdivinha{
+    width: 22.5rem;  /* 600px convertido para rem */
+    height: 3.05rem;
+
+    font-family: 'jockeyOne';
+	font-size: x-large;
+	padding: 0.5%;
+	margin-bottom: 1%;
+	margin-top: 1%;
 }
 
 ::placeholder{
-    font-size: x-large;
+	font-size: x-large;
 }
 
 #btnEnvia{
 
-    width: 12.5rem; /* 200px */
-    height: 3.625rem; /* 58px */
+    width: 12.5rem;
+    height: 3.625rem;
     font-family: 'jockeyOne';
     background-color: rgb(92, 89, 89);
-    border: 0.125rem solid #003CFF; /* 2px */
+    border:0.125rem solid #003CFF;
+
     color: white;
     cursor: pointer; 
-    font-size: x-large;
+	font-size: x-large;
+	padding: 0.5%;
+	margin-left: 3%;
+	margin-bottom: 1%;
+	box-shadow: 0px 0px 20px #003CFF !important;
 }
 
+#btnEnvia:hover{
+    background-color: rgb(71, 68, 68);
+	border:2px solid #0c3bd8;
+}
+
+#btnEnvia:active{
+    background-color: rgb(92, 89, 89);
+	border:2px solid #003CFF;
+}
 
 #footer{
     padding:2%;
@@ -84,11 +103,11 @@ h1{
 }
 
 .teclado {
-
-    display: grid;
-    grid-template-columns: repeat(13, 4.375rem); /* 70px */
-    grid-template-rows: repeat(2, 4.375rem); /* 70px */
-    grid-gap: 0.4375rem; /* 7px */
+	margin-top: 2%;
+	display: grid;
+	grid-template-columns: repeat(13, 4.375rem);
+	grid-template-rows: repeat(2, 4.375rem);
+	grid-gap: 0.4375rem;
 }
 
 .teclado div {

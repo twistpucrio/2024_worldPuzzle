@@ -686,7 +686,6 @@ biju
 oval
 jura
 case
-IBGE
 lupa
 bata
 giro
