@@ -277,11 +277,12 @@ h1{
 		margin-bottom: 0.625rem; /* 10px */
 		justify-content: center;
 		align-items: center;
+        margin-top: 3.5rem;
 	}
 	
 	.quadro div {
-		width: 2.6875rem; /* Reduzido de 65px para 43px */
-		height: 2.6875rem; /* Reduzido de 65px para 43px */
+		width: 2.800rem; /* Reduzido de 65px para 43px */
+		height: 2.800rem; /* Reduzido de 65px para 43px */
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -295,22 +296,22 @@ h1{
 	.teclado{
 		display:none;
 	}
-	#caixaAdivinha{
-		width: 20rem; /* 600px */
-		height: 2.7rem; /* 60px */
-		font-family: 'jockeyOne';
-		margin-top: 9%;
-	}
-	
-	
-	#btnEnvia{
-		width: 7rem; /* 200px */
-		height: 2.5rem; /* 58px */
-		font-family: 'jockeyOne';
-		background-color: rgb(92, 89, 89);
-		border: 0.125rem solid #003CFF; /* 2px */
-		color: white;
-		cursor: pointer; 
-		font-size: x-large;
-	}
+	  #caixaAdivinha {
+        width: 13rem;
+        height: 2.7rem;
+        font-family: 'jockeyOne';
+        margin-right: 0.5rem;
+
+    }
+    #btnEnvia {
+        width: 6rem;
+        height: 2.7rem;
+        font-family: 'jockeyOne';
+        background-color: rgb(92, 89, 89);
+        border: 0.125rem solid #00D9FF;
+        color: white;
+        cursor: pointer;
+        font-size: 1.25rem;
+        margin-top: 3rem;
+    }
 }
