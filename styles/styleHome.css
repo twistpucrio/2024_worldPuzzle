@@ -26,10 +26,11 @@ header {
     margin-top: 1%;
     margin-bottom: 1%;
     text-shadow:
-        2.5px 2.5px 0 #FF00DD,
-        -2.5px -2.5px 0 #FF00DD,
-        2.5px -2.5px 0 #FF00DD,
-        -2.5px 2.5px 0 #FF00DD;
+    1.5px 1.5px 2px #FF00DD,
+    -1.5px -1.5px 2px #FF00DD,
+    1.5px -1.5px 2px #FF00DD,
+    -1.5px 1.5px 2px #FF00DD,
+    0px 0px 45px #FF00DD;
 }
 
 h1 {
@@ -37,10 +38,11 @@ h1 {
     text-align: center;
     color: white;
     text-shadow:
-    1.5px 1.5px 0 #FF00DD,
-    -1.5px -1.5px 0 #FF00DD,
-    1.5px -1.5px 0 #FF00DD,
-    -1.5px 1.5px 0 #FF00DD;
+    1.5px 1.5px 2px #FF00DD,
+    -1.5px -1.5px 2px #FF00DD,
+    1.5px -1.5px 2px #FF00DD,
+    -1.5px 1.5px 2px #FF00DD,
+    0px 0px 30px #FF00DD;
     font-size: 35px;
 }
 

@@ -43,7 +43,12 @@ h1{
     font-size:3.75rem;
     margin-top: 2%;
     margin-bottom: 1%;
-    text-shadow: 8px 3px 8px #00D9FF;
+	text-shadow: 
+	0.1rem 0.1rem 0 #00D9FF, 
+	-0.1rem -0.1rem 0 #00D9FF, 
+	0.1rem -0.1rem 0 #00D9FF,
+	-0.1rem 0.1rem 0 #00D9FF,
+	0px 0px 30px #00D9FF; 
 	letter-spacing: 2px;
 }
 
