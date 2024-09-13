@@ -45,12 +45,8 @@ h1{
     font-size: 3.75rem; /* 60px */
     margin-top: 2%;
     margin-bottom: 1%;
-    text-shadow: 
-
-    0.15625rem 0.15625rem 0 #003CFF, /* 2.5px */
-    -0.15625rem -0.15625rem 0 #003CFF, /* -2.5px */
-    0.15625rem -0.15625rem 0 #003CFF,
-    -0.15625rem 0.15625rem 0 #003CFF;
+    text-shadow: 8px 3px 8px #003cff;
+    letter-spacing: 2px;
 }
 
 
@@ -293,11 +289,8 @@ h1{
 		font-size: 2.5rem; /* 60px convertido para rem */
 		height: 3rem;
 		margin-bottom: 15%;
-		text-shadow: 
-        0.15625rem 0.15625rem 0 #003CFF, /* 2.5px */
-        -0.15625rem -0.15625rem 0 #003CFF, /* -2.5px */
-        0.15625rem -0.15625rem 0 #003CFF,
-        -0.15625rem 0.15625rem 0 #003CFF 
+		text-shadow: 8px 3px 8px #003cff;
+        letter-spacing: 2px;
 	}
 
     .quadro {
@@ -337,7 +330,7 @@ h1{
 		height: 3rem; 
 		font-family: 'jockeyOne';
 		background-color: rgb(92, 89, 89);
-		border: 0.125rem solid #00D9FF;
+		border: 0.125rem solid #0c3bd8;
 		color: white;
 		cursor: pointer;
 		font-size: 1.25rem; 
