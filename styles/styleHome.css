@@ -141,7 +141,7 @@ a {
     position: absolute;
     z-index: 2;
     inset: 0;
-    scale: 2;
+    scale: 3;
 
     animation: spin 2.2s linear infinite;
 }
