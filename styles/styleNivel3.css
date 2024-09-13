@@ -286,83 +286,75 @@ h1{
 }
 
 
-@media screen and (max-width: 719px){
-	#nav{
-		padding:1%;
-		margin-bottom: 0;
-		width: 3.125rem; /* 50px */
-		height: 3.125rem; /* 50px */
-		padding-left: 0.5%;
-		display: inline-block;
-		margin-left: 0.625rem; /* 10px */
-		position: absolute;
-		top: 1%;
-		left: 1%;
-	}
-
-	#nav a{
-		color:white;
-		font-size: larger;
-		padding-left: 0.5%;
-		margin-bottom: 0;
-		text-decoration: none;
-	}
-	
-
-	h1{
+@media screen and (max-width: 410px) { /* 420px convertido para rem */
+    h1 {
 		color: white;
 		text-align: center;
-		font-size: 3rem; /* 60px */
-		margin-top: 7%;
-		margin-bottom: 15%;
+		font-size: 2.5rem; /* 60px convertido para rem */
 		height: 3rem;
+		margin-bottom: 15%;
 		text-shadow: 
-		0.15625rem 0.15625rem 0 #003CFF, /* 2.5px */
-		-0.15625rem -0.15625rem 0 #003CFF, /* -2.5px */
-		0.15625rem -0.15625rem 0 #003CFF,
-		-0.15625rem 0.15625rem 0 #003CFF;
+        0.15625rem 0.15625rem 0 #003CFF, /* 2.5px */
+        -0.15625rem -0.15625rem 0 #003CFF, /* -2.5px */
+        0.15625rem -0.15625rem 0 #003CFF,
+        -0.15625rem 0.15625rem 0 #003CFF 
 	}
-	.quadro {
+
+    .quadro {
 		display: grid;
-		grid-template-columns: repeat(6, 2.5rem); /* Reduzido de 60px para 40px */
-		grid-gap: 1.25rem; /* Mantido em 20px */
-		margin-bottom: 0.625rem; /* 10px */
+		grid-template-columns: repeat(6, 2.6rem); /* 60px convertido para 3.75rem */
+		grid-gap: 1rem; /* 20px convertido para 1.25rem */
+		margin-bottom: 0.625rem; /* 10px convertido para 0.625rem */
 		justify-content: center;
 		align-items: center;
 	}
 	
 	.quadro div {
-		width: 2.6875rem; /* Reduzido de 65px para 43px */
-		height: 2.6875rem; /* Reduzido de 65px para 43px */
+		width: 3rem; /* 65px convertido para 4.0625rem */
+		height: 3rem; /* 65px convertido para 4.0625rem */
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border: 0.125rem solid #ccc; /* 2px */
-		box-shadow: 0px 0px 0.625rem #ccc; /* 10px */
-		font-size: 1.5rem; /* Reduzido de 28px para 24px */
+		border: 0.125rem solid #ccc; /* 2px convertido para 0.125rem */
+		box-shadow: 0 0 0.625rem #ccc; /* 10px convertido para 0.625rem */
+		font-size: 1.75rem; /* 28px convertido para 1.75rem */
 		font-weight: bold;
 		color: white;
 	}
-
-	.teclado{
-		display:none;
-	}
-	#caixaAdivinha{
-		width: 20rem; /* 600px */
-		height: 2.7rem; /* 60px */
+	#teclado{
+        display: none;
+    }
+	#caixaAdivinha {
+		width: 10rem; 
+		height: 3rem; 
 		font-family: 'jockeyOne';
-		margin-top: 9%;
+		font-size: small;
+		margin-right: 0.5rem; 
 	}
 	
-	
-	#btnEnvia{
-		width: 7rem; /* 200px */
-		height: 2.5rem; /* 58px */
+	#btnEnvia {
+		width: 4rem; 
+		height: 3rem; 
 		font-family: 'jockeyOne';
 		background-color: rgb(92, 89, 89);
-		border: 0.125rem solid #003CFF; /* 2px */
+		border: 0.125rem solid #00D9FF;
 		color: white;
-		cursor: pointer; 
-		font-size: x-large;
+		cursor: pointer;
+		font-size: 1.25rem; 
+        display: inline-block;
+	}
+    nav{
+        padding: 0.625rem; /* 1% convertido para rem assumindo um tamanho de fonte base de 16px */
+        margin-bottom: 0;
+        width: 2.5rem; /* 50px convertido para rem */
+        height: 2.5rem; /* 50px convertido para rem */
+        display: inline-block;
+        position: absolute;
+        top: 0.625rem; /* 1% convertido para rem */
+        left: 0.625rem; /* 1% convertido para rem */
+    }
+	::placeholder{
+		font-size: medium;
+		text-align: center;
 	}
 }

@@ -231,11 +231,11 @@ h1 {
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* 4px e 8px convertidos para rem */
     display: inline-block;
 }
-@media screen and (max-width: 500px) { /* 420px convertido para rem */
+@media screen and (max-width: 420px) { /* 420px convertido para rem */
     h1 {
 		color: white;
 		text-align: center;
-		font-size: 3rem; /* 60px convertido para rem */
+		font-size: 2.5rem; /* 60px convertido para rem */
 		height: 3rem;
 		margin-bottom: 15%;
 		text-shadow: 
@@ -270,21 +270,36 @@ h1 {
         display: none;
     }
 	#caixaAdivinha {
-		width: 13rem; 
-		height: 2.7rem; 
+		width: 10rem; 
+		height: 3rem; 
 		font-family: 'jockeyOne';
+		font-size: small;
 		margin-right: 0.5rem; 
 	}
 	
 	#btnEnvia {
-		width: 6rem; 
-		height: 2.7rem; 
+		width: 4rem; 
+		height: 3rem; 
 		font-family: 'jockeyOne';
 		background-color: rgb(92, 89, 89);
 		border: 0.125rem solid #00D9FF;
 		color: white;
 		cursor: pointer;
 		font-size: 1.25rem; 
-		margin-top: 0; 
+        display: inline-block;
+	}
+    nav{
+        padding: 0.2rem; /* 1% convertido para rem assumindo um tamanho de fonte base de 16px */
+        margin-bottom: 0;
+        width: 2.5rem; /* 50px convertido para rem */
+        height: 2.5rem; /* 50px convertido para rem */
+        display: inline-block;
+        
+        top: 0.625rem; /* 1% convertido para rem */
+        left: 0.4rem; /* 1% convertido para rem */
+    }
+	::placeholder{
+		font-size: medium;
+		text-align: center;
 	}
 }

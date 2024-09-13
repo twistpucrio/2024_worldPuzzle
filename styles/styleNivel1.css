@@ -6,16 +6,15 @@ body {
     background: #000000;
 }
 #nav{
-    padding: 1%;           /* Percentuais mantidos como estão */
-    margin-bottom: 0;     /* Margem em pixels não convertida */
-    width: 3.125rem;      /* 50px convertido para rem */
-    height: 3.125rem;     /* 50px convertido para rem */
-    padding-left: 0.5%;   /* Percentuais mantidos como estão */
+    padding: 1%;          
+    margin-bottom: 0;   
+    width: 3.125rem;      
+    height: 3.125rem;     
+    padding-left: 0.5%;   
     display: inline-block;
-    margin-left: 0.625rem; /* 10px convertido para rem */
+    margin-left: 0.625rem; 
     position: absolute;
-    top: 1%;               /* Percentuais mantidos como estão */
-    left: 1%;
+    top: 1%;               
 	
 	
 }
@@ -26,12 +25,10 @@ body {
     padding-left: 0.5%;
 	margin-bottom: 0;
     text-decoration: none;
-
-	
 }
 
 img{
-    width: 2.1875rem;  /* 35px convertido para rem */
+    width: 2.1875rem; 
     height: 2.1875rem;
 }
 
@@ -39,8 +36,6 @@ img{
     justify-content: center; 
     align-items: center; 
     display: flex;
-	
-	
 }
 
 h1{
@@ -58,7 +53,7 @@ h1{
 }
 
 #caixaAdivinha{
-    width: 22.5rem;  /* 600px convertido para rem */
+    width: 22.5rem;  
     height: 3.05rem;
 
     font-family: 'jockeyOne';
@@ -197,33 +192,33 @@ h1{
 }
 
 .quadro div {
-    width: 4.0625rem; /* 65px / 16 = 4.0625rem */
-    height: 4.0625rem; /* 65px / 16 = 4.0625rem */
+    width: 4.0625rem; 
+    height: 4.0625rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0.125rem solid #ccc; /* 2px / 16 = 0.125rem */
-    box-shadow: 0 0 0.625rem #ccc; /* 10px / 16 = 0.625rem */
-    font-size: 1.75rem; /* 28px / 16 = 1.75rem */
+    border: 0.125rem solid #ccc; 
+    box-shadow: 0 0 0.625rem #ccc; 
+    font-size: 1.75rem;
     font-weight: bold;
     color: white;
 }
 
 .correct {
-	/* background-color: #000000; */
+	
 	color: white;
 	border: 2px solid #6aaa64 !important;
 	box-shadow: 0px 0px 1.25rem #6aaa64 !important;
 }
 
 .present {
-	/* background-color: #c9b458; */
+
 	border: 2px solid #c9b458 !important;
 	box-shadow: 0px 0px 1.25rem #c9b458 !important;
 }
 
 .absent {
-	/* background-color: #787c7e; */
+	
 	border: 2px solid #5c5e5f !important;
 	box-shadow: 0rem 0rem 1.25rem #5c5e5f !important;
 }
@@ -237,68 +232,80 @@ h1{
 	display: inline-block;
 }
 
-/* para testes */
+
 #messagem{
 	color: #ccc;
 }
 
-@media screen and (max-width: 719px) {
-	#teclado{
-		display: none;
-	}
-	#caixaAdivinha{
-		
-			width: 20rem;  /* 600px convertido para rem */
-			height: 2.7rem;
-			font-family: 'jockeyOne';
-	
-	}
-	#btnEnvia{
-		width: 7rem;
-		height: 2.5rem;
-		font-family: 'jockeyOne';
-		background-color: rgb(92, 89, 89);
-		border:0.125rem solid #00D9FF;
+@media screen and (max-width: 410px) { /* 420px convertido para rem */
+    h1 {
 		color: white;
-		cursor: pointer; 
-		font-size: x-large;
-		margin-top: 0.5%;
+		text-align: center;
+		font-size: 2.5rem; /* 60px convertido para rem */
+		height: 3rem;
+		margin-bottom: 15%;
+		text-shadow: 
+			0.125rem 0.125rem 0 #00D9FF, 
+			-0.125rem -0.125rem 0 #00D9FF, 
+			0.125rem -0.125rem 0 #00D9FF,
+			-0.125rem 0.125rem 0 #00D9FF; 
 	}
-	.quadro {
-		display: grid;
-		grid-template-columns: repeat(4, 3.125rem); /* Ajustado de 3.75rem para 3.125rem */
-		grid-gap: 1.25rem; /* Mantido o mesmo */
 
+    .quadro {
+		display: grid;
+		grid-template-columns: repeat(4, 3.2rem); /* 60px convertido para 3.75rem */
+		grid-gap: 1rem; /* 20px convertido para 1.25rem */
+		margin-bottom: 0.625rem; /* 10px convertido para 0.625rem */
 		justify-content: center;
 		align-items: center;
 	}
 	
 	.quadro div {
-
-		width: 3.125rem; /* Ajustado de 4.0625rem para 3.125rem */
-		height: 3.125rem; /* Ajustado de 4.0625rem para 3.125rem */
+		width: 3.5rem; /* 65px convertido para 4.0625rem */
+		height: 3.5rem; /* 65px convertido para 4.0625rem */
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border: 0.125rem solid #ccc; /* Mantido o mesmo */
-		box-shadow: 0 0 0.625rem #ccc; /* Mantido o mesmo */
-		font-size: 1.25rem; /* Ajustado de 1.75rem para 1.25rem */
+		border: 0.125rem solid #ccc; /* 2px convertido para 0.125rem */
+		box-shadow: 0 0 0.625rem #ccc; /* 10px convertido para 0.625rem */
+		font-size: 1.75rem; /* 28px convertido para 1.75rem */
 		font-weight: bold;
 		color: white;
 	}
-	h1{
+	#teclado{
+        display: none;
+    }
+	#caixaAdivinha {
+		width: 10rem; 
+		height: 3rem; 
+		font-family: 'jockeyOne';
+		font-size: small;
+		margin-right: 0.5rem; 
+	}
+	
+	#btnEnvia {
+		width: 4rem; 
+		height: 3rem; 
+		font-family: 'jockeyOne';
+		background-color: rgb(92, 89, 89);
+		border: 0.125rem solid #00D9FF;
 		color: white;
+		cursor: pointer;
+		font-size: 1.25rem; 
+        display: inline-block;
+	}
+    nav{
+        padding: 0.625rem; /* 1% convertido para rem assumindo um tamanho de fonte base de 16px */
+        margin-bottom: 0;
+        width: 2.5rem; /* 50px convertido para rem */
+        height: 2.5rem; /* 50px convertido para rem */
+        display: inline-block;
+        position: absolute;
+        top: 0.625rem; /* 1% convertido para rem */
+        left: 0.625rem; /* 1% convertido para rem */
+    }
+	::placeholder{
+		font-size: medium;
 		text-align: center;
-		font-size:3rem;
-		height: 3rem;
-		margin-bottom: 15%;
-		text-shadow: 
-		0.15625rem 0.15625rem 0 #00D9FF, 
-		-0.15625rem -0.15625rem 0 #00D9FF, 
-		0.15625rem -0.15625rem 0 #00D9FF,
-		-0.15625rem 0.15625rem 0 #00D9FF; 
 	}
-	#mensagem{
-		display: none;
-	}
-	}
+}
