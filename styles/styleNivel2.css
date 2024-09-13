@@ -45,7 +45,12 @@ h1 {
     font-size: 3.75rem; /* 60px convertido para rem */
     margin-top: 1.25rem; /* 2% convertido para rem */
     margin-bottom: 1%;
-    text-shadow:  8px 3px 8px #50bbe6;
+    text-shadow: 
+	0.1rem 0.1rem 0 #006faf, 
+	-0.1rem -0.1rem 0 #006faf, 
+	0.1rem -0.1rem 0 #006faf,
+	-0.1rem 0.1rem 0 #006faf,
+	0px 0px 30px #00aeff; 
     letter-spacing: 2px;
 }
 
@@ -64,13 +69,17 @@ h1 {
     font-size: 1.25rem; /* 'x-large' aproximado para rem */
 }
 
+#messagem{
+	color: #ccc;
+}
+
 #btnEnvia{
 
     width: 12.5rem;
     height: 3.625rem;
     font-family: 'jockeyOne';
     background-color: rgb(92, 89, 89);
-    border:0.125rem solid #50bbe6;
+    border:0.125rem solid #006faf;
 
     color: white;
     cursor: pointer; 
@@ -83,12 +92,12 @@ h1 {
 
 #btnEnvia:hover{
     background-color: rgb(71, 68, 68);
-	border:2px solid #08bddd;
+	border:2px solid #04598a;
 }
 
 #btnEnvia:active{
     background-color: rgb(92, 89, 89);
-	border:2px solid #08bddd;
+	border:2px solid #006faf;
 }
 
 #footer{
