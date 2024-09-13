@@ -86,9 +86,16 @@ function submitGuess(targetWord) {
 	attempts++;
 	updateKeyChart();
 	if (guess == targetWord) {
+        let audio_vit = document.querySelector('#audio_vit');
+	    audio_vit.play();
+
         let modal = document.getElementById("modal_vit");
         modal.classList.add("open");
+
 	} else if (attempts >= maxAttempts) {
+        let audio_per = document.querySelector('#audio_per');
+	    audio_per.play();
+
         let modal = document.getElementById("modal_per");
         modal.classList.add("open");
         let paragrafo = document.getElementById("palavra_certa");
@@ -122,6 +129,9 @@ function verificaEnvio(targetWord, words){
 }
 
 window.addEventListener("load", async function(){
+    let audio_niv = document.querySelector('#audio_niv');
+	audio_niv.play();
+
     let btnEnvia = document.querySelector("#btnEnvia");
     let textoInput = document.querySelector("#caixaAdivinha");
 
