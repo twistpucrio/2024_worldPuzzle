@@ -5,31 +5,30 @@
 body {
     background: #000000;
 }
-#nav{
-    padding: 1%;          
-    margin-bottom: 0;   
-    width: 3.125rem;      
-    height: 3.125rem;     
-    padding-left: 0.5%;   
+#nav {
+    padding: 0.625rem; /* 1% convertido para rem assumindo um tamanho de fonte base de 16px */
+    margin-bottom: 0;
+    width: 3.125rem; /* 50px convertido para rem */
+    height: 3.125rem; /* 50px convertido para rem */
+    padding-left: 0.125rem; /* 0.5% convertido para rem */
     display: inline-block;
-    margin-left: 0.625rem; 
+    margin-left: 0.625rem; /* 10px convertido para rem */
     position: absolute;
-    top: 1%;               
-	
-	
+    top: 0.625rem; /* 1% convertido para rem */
+    left: 0.625rem; /* 1% convertido para rem */
 }
 
-#nav a{
-    color:white;
-    font-size: larger;
-    padding-left: 0.5%;
-	margin-bottom: 0;
+#nav a {
+    color: white;
+    font-size: 1.125rem; /* 'larger' aproximado para rem */
+    padding-left: 0.125rem; /* 0.5% convertido para rem */
+    margin-bottom: 0;
     text-decoration: none;
 }
 
-img{
-    width: 2.1875rem; 
-    height: 2.1875rem;
+img {
+    width: 2.1875rem; /* 35px convertido para rem */
+    height: 2.1875rem; /* 35px convertido para rem */
 }
 
 #main{
