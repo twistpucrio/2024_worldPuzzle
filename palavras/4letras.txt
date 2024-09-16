@@ -749,6 +749,7 @@ gola
 goma
 teta
 galo
+fila
 rios
 rema
 remo
@@ -761,4 +762,4 @@ soca
 arca
 reis
 gago
-vaco
+vaca
