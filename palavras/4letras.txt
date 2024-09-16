@@ -76,10 +76,12 @@ tais
 real
 item
 povo
-mera
 afim
 essa
 leal
+cafe
+soca
+lara
 usar
 erro
 post
@@ -195,7 +197,6 @@ fado
 topo
 sebe
 feio
-puto
 lixo
 peso
 fofo
@@ -588,8 +589,6 @@ mola
 toma
 funk
 rodo
-viga
-fula
 unha
 nave
 kiwi
@@ -669,7 +668,6 @@ siri
 puma
 miau
 live
-spot
 atum
 meia
 meso
@@ -697,7 +695,6 @@ mula
 cala
 tara
 taca
-geek
 alga
 rala
 stop
@@ -743,9 +740,11 @@ mima
 buda
 fato
 nuca
-puta
 liso
 gola
 goma
 teta
 galo
+seco 
+role
+lodo
