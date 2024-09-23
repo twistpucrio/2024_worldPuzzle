@@ -133,6 +133,7 @@ body{
 }
 
 @media screen and (max-width: 719px) {
+	
 	.modal-inner_per{
 		width: 60%;
 		height: 30%;
@@ -143,3 +144,4 @@ body{
 		height: 30%;
 	}
 }
+
